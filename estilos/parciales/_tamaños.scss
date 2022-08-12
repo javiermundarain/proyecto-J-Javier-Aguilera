@@ -1,0 +1,21 @@
+@import "./responsive-mixins";
+
+.footer{
+    width: 100%;
+
+    @include movil {
+        width: 95%;
+    }
+}
+
+.buho{
+    width: 100%;
+
+    @include movil {
+        width: 50%;
+    }
+
+    @include tablet {
+        width: 50%;
+    }
+}
