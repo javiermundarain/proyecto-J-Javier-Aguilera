@@ -49,7 +49,20 @@
   <div class="container-fluid back font__medv">
     <div class="row">
       <div class="col-md-12">
-    <p class="display-1 mt-3 text-center text__color"><u>Pociones</u></p>
+        <button onclick="openmodal (`#modal1`)"><span id="contadorCarrito">0</span> Carrito</button>
+        <div id="modal1" class="modal-wrapper">
+            <div class="modal-cont">
+                <div class="modal-header">
+                    <button onclick="closemodal (`#modal1`)">cerrar</button> 
+                </div>
+                <div class="modal-content">
+                    <div id="carrito-contenedor"></div>
+                    <p>Precio total: $<span id="precioTotal">0</span></p>
+                    <button class="vaciar-carrito" id="vaciar-carrito">vaciar carrito</button>
+                </div>
+            </div>
+        </div>
+
       <div id="contenido-fichas"></div>
       </div>
     </div>
