@@ -8,6 +8,9 @@ const botonVaciar = document.getElementById ('vaciar-carrito')
 const contadorCarrito = document.getElementById ('contadorCarrito')
 
 const precioTotal = document.getElementById ('precioTotal')
+
+const vaciar = document.getElementById("vaciar-carrito");
+
                 //importante en html
 
                 //modal
@@ -41,10 +44,24 @@ botonVaciar.addEventListener ("click", () =>{
 })
                 //Aplicacion de Vaciar Carrito
 
+
+                //Aplicacion de Mensaje de Vaciar
+    vaciar.addEventListener("click", ()  => {
+        Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Se vacio el carrito correctamente',
+        showConfirmButton: false,
+        timer: 1500
+    })
+});
+
+                //Aplicacion de Mensaje de Vaciar
+
                 //Aplicacion de mi Stock
 stockProductos.forEach((producto) => {
-    const div = document.createElement ('div')
-    div.classList.add('producto')
+    const div = document.createElement ('div');
+    div.classList.add('producto', 'col');
     div.innerHTML = `
     <img src="${producto.imagen}" alt="">
     <h2>${producto.nombre}</h2>
