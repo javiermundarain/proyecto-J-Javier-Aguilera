@@ -13,18 +13,6 @@ const vaciar = document.getElementById("vaciar-carrito");
 
                 //importante en html
 
-                //modal
-  function openmodal(selector){
-    const el = document.querySelector(selector);
-    el.classList.add("modal-opened");
-}
-
-function closemodal(selector){
-    const el = document.querySelector(selector);
-    el.classList.remove("modal-opened");
-}
-                //modal
-
 let carrito = []
 
                 //Aplicacion de JSON y SessionStorage
