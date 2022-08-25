@@ -54,7 +54,6 @@ stockProductos.forEach((producto) => {
     <h2>${producto.nombre}</h2>
     <p>${producto.desc}</p>
     <p class="precioProducto">Precio: ${producto.precio}</p>
-    <p class="precioProducto">Precio: "data.rates.ARS"</p>
     <button class= "btn btn-dark" id= "agregar${producto.id}" class="boton-agregar">Agregar</button>
     `
     contenedorProductos.appendChild(div)
@@ -126,8 +125,9 @@ const actualizarCarrito = () => {
 
     fetch( URL )
     .then( response => response.json() )
-    .then( () => { 
-    const arg = (data.rates.ARS);
+    .then( data => { 
+        console.log( data )
+        console.log( 'Precio del Peso: ' + data.rates.ARS );
     })
 
                 //llamada del fecht
