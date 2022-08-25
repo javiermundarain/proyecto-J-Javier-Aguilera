@@ -43,7 +43,6 @@ botonVaciar.addEventListener ("click", () =>{
         timer: 1500
     })
 });
-
                 //Aplicacion de Mensaje de Vaciar
 
                 //Aplicacion de mi Stock
@@ -55,6 +54,7 @@ stockProductos.forEach((producto) => {
     <h2>${producto.nombre}</h2>
     <p>${producto.desc}</p>
     <p class="precioProducto">Precio: ${producto.precio}</p>
+    <p class="precioProducto">Precio: "data.rates.ARS"</p>
     <button class= "btn btn-dark" id= "agregar${producto.id}" class="boton-agregar">Agregar</button>
     `
     contenedorProductos.appendChild(div)
@@ -119,3 +119,15 @@ const actualizarCarrito = () => {
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0)
 }
                 //Funcionamiento del Carrito
+
+                //llamada del fecht
+
+    const URL = 'https://open.er-api.com/v6/latest/USD'
+
+    fetch( URL )
+    .then( response => response.json() )
+    .then( () => { 
+    const arg = (data.rates.ARS);
+    })
+
+                //llamada del fecht
