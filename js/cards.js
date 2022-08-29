@@ -121,13 +121,17 @@ const actualizarCarrito = () => {
 
                 //llamada del fecht
 
-    const URL = 'https://open.er-api.com/v6/latest/USD'
+    //const URL = 'https://open.er-api.com/v6/latest/USD'
 
-    fetch( URL )
-    .then( response => response.json() )
-    .then( data => { 
-        console.log( data )
-        console.log( 'Precio del Peso: ' + data.rates.ARS );
-    })
+    //fetch( URL )
+    //.then( response => response.json() )
+    //.then( data => { 
+        //console.log( data )
+        //console.log( 'Precio del Peso: ' + data.rates.ARS );
+    //})
+
+    //const mostrarData = (data) => {
+        //console.log(data)
+    //}
 
                 //llamada del fecht
