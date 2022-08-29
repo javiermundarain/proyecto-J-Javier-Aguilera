@@ -11,6 +11,8 @@ const precioTotal = document.getElementById ('precioTotal')
 
 const vaciar = document.getElementById("vaciar-carrito");
 
+const moneda = document.getElementById ("moneda-fichas")
+
                 //importante en html
 
 let carrito = []
