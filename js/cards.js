@@ -11,8 +11,6 @@ const precioTotal = document.getElementById ('precioTotal')
 
 const vaciar = document.getElementById("vaciar-carrito");
 
-const moneda = document.getElementById ("moneda-fichas")
-
                 //importante en html
 
 let carrito = []
@@ -123,17 +121,15 @@ const actualizarCarrito = () => {
 
                 //llamada del fecht
 
-    //const URL = 'https://open.er-api.com/v6/latest/USD'
+    const URL = "../data/stock.json";
 
-    //fetch( URL )
-    //.then( response => response.json() )
-    //.then( data => { 
-        //console.log( data )
-        //console.log( 'Precio del Peso: ' + data.rates.ARS );
-    //})
+    const HTMLresponse = document.querySelector("#moneda-ficha");
+    
 
-    //const mostrarData = (data) => {
-        //console.log(data)
-    //}
-
-                //llamada del fecht
+    fetch(URL)
+    .then((response) => response.json())
+    .then((data) => {
+        console.log( data )
+        const tpl = data.map( (data) => `<h2>${data.nombre} 🛒 ${data.stock}</h2>`);
+        HTMLresponse.innerHTML = `<div>${tpl}</div>`;
+    })

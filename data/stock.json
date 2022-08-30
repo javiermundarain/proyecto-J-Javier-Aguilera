@@ -1,0 +1,6 @@
+[
+    {"id": 1, "nombre": "Poción de amor", "stock": 50, "precio": 80},
+    {"id": 2, "nombre": "Poción de clarividencia", "stock": 46, "precio": 150},
+    {"id": 3, "nombre": "Poción de Muerte instantanea", "stock": 58, "precio": 500},
+    {"id": 4, "nombre": "Poción de Resurreción", "stock": 98, "precio": 900}
+]
