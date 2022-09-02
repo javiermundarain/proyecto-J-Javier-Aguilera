@@ -38,7 +38,7 @@
             <a class="nav-link" href="./reserva.html">Reserva</a>
             <a class="nav-link active" aria-current="page" href="#">Tienda</a>
             <!-- Boton modal -->
-            <button onclick="openmodal (`#modal1`)" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"><span id="contadorCarrito">0</span>
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"><span id="contadorCarrito">0</span>
               Carrito
               </button>
   
@@ -46,13 +46,22 @@
               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header text-center back font__medv">
                     <h5 class="modal-title" id="exampleModalLabel">Carrito de Compra</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div id="carrito-contenedor"></div>
-                    <p>Precio total: $<span id="precioTotal">0</span></p>
-                      <button class= "vaciar-carrito btn btn-dark" id="vaciar-carrito">vaciar carrito</button>
+                    <div class="container-fluid text-center back font__medv">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div id="carrito-contenedor"></div>
+                          <h2 class="text-center back font__medv mt-3">Precio total: $<span id="precioTotal">0</span></h2>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button class= "vaciar-carrito btn btn-dark mt-3" id="vaciar-carrito">vaciar carrito</button>
+                      <button class= "vaciar-carrito btn btn-dark mt-3" id="comprar-carrito">comprar</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -60,6 +69,10 @@
         </div>
       </div>
     </nav>
+
+   
+    
+    
                                   <!-- Barra de Nav final -->
 
                                   <!-- Tienda Comienzo -->

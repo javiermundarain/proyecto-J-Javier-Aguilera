@@ -15,15 +15,15 @@ const vaciar = document.getElementById("vaciar-carrito");
 
 let carrito = []
 
-                //Aplicacion de JSON y SessionStorage
+                //Aplicacion de JSON y localStorage
 document.addEventListener ("DOMContentLoaded", () => {
-        if (sessionStorage.getItem("carrito")){
-            carrito = JSON.parse(sessionStorage.getItem ("carrito"))
+        if (localStorage.getItem("carrito")){
+            carrito = JSON.parse(localStorage.getItem ("carrito"))
             actualizarCarrito ()
         }
     })
 
-                //Aplicacion de JSON y SessionStorage
+                //Aplicacion de JSON y localStorage
 
                 //Aplicacion de Vaciar Carrito
 botonVaciar.addEventListener ("click", () =>{
@@ -87,7 +87,7 @@ const agregarAlCarrito = (prodId) => {
 }
                 //Aplicacion de Funcionamiento al agregar
 
-                //Aplicacion de Elimar 1 solo elemnto del carrito
+                //Aplicacion de Elimar 1 solo elemento del carrito
 const eliminarDelCarrito = (prodId) => {
     const item = carrito.find ((prod) => prod.id === prodId)
     const indice = carrito.indexOf(item)
@@ -95,7 +95,7 @@ const eliminarDelCarrito = (prodId) => {
     actualizarCarrito ()
 }
 
-                //Aplicacion de Elimar 1 solo elemnto del carrito
+                //Aplicacion de Elimar 1 solo elemento del carrito
 
                 //Funcionamiento del Carrito
 const actualizarCarrito = () => {
@@ -103,6 +103,7 @@ const actualizarCarrito = () => {
 
     carrito.forEach((prod) => {
     const div = document.createElement('div')
+    div.classList.add('producto', 'col');
     div.innerHTML =`
     <p>${prod.nombre}</p>
     <p>Precio: ${prod.precio}</p>
@@ -111,7 +112,7 @@ const actualizarCarrito = () => {
     `
     contenedorCarrito.appendChild(div)
 
-    sessionStorage.setItem ("carrito", JSON.stringify(carrito))
+    localStorage.setItem ("carrito", JSON.stringify(carrito))
     })
 
     contadorCarrito.innerText = carrito.length
